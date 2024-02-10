@@ -12,14 +12,14 @@
         compatible = "zmk,kscan-gpio-matrix";
         diode-direction = "row2col";
 
-        row-gpios
-            = <&pro_micro 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&pro_micro 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            ;
-
         col-gpios
             = <&pro_micro 16 GPIO_ACTIVE_HIGH>
             , <&pro_micro 10 GPIO_ACTIVE_HIGH>
+            ;
+
+        row-gpios
+            = <&pro_micro 15 GPIO_ACTIVE_HIGH>
+            , <&pro_micro 14 GPIO_ACTIVE_HIGH>
             ;
 // This pin configuration (row: 15, 14 / col: 16 / 10)
 // translates to connecting the following keyboard matrix
