@@ -21,6 +21,13 @@
             = <&pro_micro 16 GPIO_ACTIVE_HIGH>
             , <&pro_micro 10 GPIO_ACTIVE_HIGH>
             ;
+// This pin configuration (row: 15, 14 / col: 16 / 10)
+// translates to connecting the following keyboard matrix
+// Connecting these pins with tweezers to press the buttons Top / Bottom Left / Right:
+// 15 + 16 = TL 
+// 15 + 10 = TR
+// 14 + 16 = BL
+// 14 + 10 = BR
 
     };
 };
