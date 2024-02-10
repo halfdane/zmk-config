@@ -1,0 +1,6 @@
+if SHIELD_DUMMY
+
+config ZMK_KEYBOARD_NAME
+    default "aDummy"
+
+endif

@@ -1,0 +1,8 @@
+file_format: "1"
+id: dummy
+name: halfdane's dummy board 
+type: shield
+url: none
+requires: [pro_micro]
+features:
+  - keys
