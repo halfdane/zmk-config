@@ -20,3 +20,5 @@
 include:
   - board: nice_nano
     shield: boardsource3x4
+  - board: nice_nano
+    shield: settings_reset
