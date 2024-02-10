@@ -22,3 +22,5 @@ include:
     shield: dummy
   - board: nice_nano
     shield: dummy_bt
+  - board: nice_nano
+    shield: braille
