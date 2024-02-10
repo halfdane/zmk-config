@@ -1,8 +1,4 @@
 
-// using a pro_micro like shield (like nice!nano)
-// the pins 10 and 16 are the two bottom right pins
-// see https://zmk.dev/docs/development/new-shield#shield-overlays
-
 / {
     chosen {
         zmk,kscan = &kscan0;
@@ -10,15 +6,11 @@
 
     kscan0: kscan_0 {
         compatible = "zmk,kscan-gpio-matrix";
+        // row2col is _probably_ not wrong
         diode-direction = "row2col";
 
-//     col_pins = (
-//        board.P1_15, board.P1_13, board.P1_11, board.P0_10
-//    )
-//    row_pins = (
-//        board.P0_31,  board.P0_29, board.P0_02
-//    )
-//    diode_orientation = DiodeOrientation.ROW2COL
+//    rows = 0_31, 0_29, 0_02
+//    cols = 1_15, 1_13 1_11 0_10
 
         col-gpios
             = <&pro_micro 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
@@ -32,6 +24,9 @@
             , <&pro_micro 20 GPIO_ACTIVE_HIGH>
             , <&pro_micro 19 GPIO_ACTIVE_HIGH>
             ;
+
+// cols
+
 
     };
 };
